@@ -41,3 +41,79 @@
     "vendor/font-awesome/brands",
     "vendor/magnific-popup/magnific-popup"
 ;
+
+/* Homepage mimic styles (fangweizhong.xyz-like single-page layout) */
+.author__urls-wrapper .btn {
+  display: none;
+}
+
+.page__title:empty {
+  display: none;
+}
+
+.paper-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #efefef;
+  padding: 2em 0;
+}
+
+.paper-box .paper-box-image {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  order: 2;
+}
+
+.paper-box .paper-box-image > div {
+  position: relative;
+}
+
+.paper-box .paper-box-image img {
+  max-width: 400px;
+  box-shadow: 3px 3px 6px #888;
+  object-fit: cover;
+}
+
+.paper-box .paper-box-text {
+  max-width: 100%;
+  order: 1;
+}
+
+@media (min-width: 48em) {
+  .paper-box .paper-box-image {
+    justify-content: flex-start;
+    min-width: 200px;
+    max-width: 30%;
+    order: 1;
+  }
+
+  .paper-box .paper-box-text {
+    justify-content: flex-start;
+    padding-left: 2em;
+    max-width: 70%;
+    order: 2;
+  }
+}
+
+.anchor:before {
+  content: "";
+  display: block;
+  position: relative;
+  width: 0;
+  height: 4.8rem;
+  margin-top: -4.8rem;
+}
+
+.badge {
+  padding: 0 1rem;
+  position: absolute;
+  margin-top: 0.5em;
+  margin-left: -0.5em;
+  color: #fff;
+  background-color: #00369f;
+  font-size: 0.8em;
+}
