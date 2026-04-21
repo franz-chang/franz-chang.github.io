@@ -166,6 +166,7 @@ exclude:
   - .asset-cache
   - .bundle
   - .github
+  - .jekyll-local.log
   - .jekyll-assets-cache
   - .sass-cache
   - assets/js/_main.js
