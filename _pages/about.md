@@ -149,7 +149,7 @@ redirect_from:
   <div class="paper-box-image">
     <div>
       <div class="badge">ECAI 2024</div>
-      <img src="images/500x300.png" alt="ecai-2024-target-driven-attack" width="100%">
+      <img src="images/Target.png" alt="ecai-2024-target-driven-attack" width="100%">
     </div>
   </div>
   <div class="paper-box-text">
@@ -167,15 +167,11 @@ redirect_from:
 
 <span class="anchor" id="honors-awards"></span>
 # 🎖 Selected Honors and Awards
-- *YYYY*: [Award Placeholder #1].
-- *YYYY*: [Award Placeholder #2].
-- *YYYY*: [Award Placeholder #3].
-- *YYYY*: [Award Placeholder #4].
+- *2024*: FCS 2024 Best Survey.
 
 <span class="anchor" id="educations"></span>
 # 📖 Educations
-- *YYYY - YYYY*: [Degree Placeholder], [University Placeholder].
-- *YYYY - YYYY*: [Degree Placeholder], [University Placeholder].
+- *2025 - 2028*: PhD in Computer Science, University of Liverpool.
 
 <span class="anchor" id="professional-service"></span>
 # 💻 Professional Service

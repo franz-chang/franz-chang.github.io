@@ -15,6 +15,7 @@ INSTALL_NODE=0
 BUILD_JS=0
 DRY_RUN=0
 MODE="local"
+TRACE=0
 DEFAULT_LOG_FILE="${TMPDIR:-/tmp}/franz-chang-github-io-jekyll.log"
 LOG_FILE="${LOG_FILE:-$DEFAULT_LOG_FILE}"
 if [[ "$LOG_FILE" == "$ROOT_DIR" || "$LOG_FILE" == "$ROOT_DIR/"* ]]; then
@@ -45,6 +46,7 @@ Options:
   --no-incremental      Disable incremental build
   --install-node        Run npm install when node_modules is missing
   --build-js            Build bundled JS assets before serving
+  --trace               Enable full Ruby backtraces for debugging
   --docker              Start the site with docker compose instead of local Ruby
   --local               Force local Ruby mode (default)
   --dry-run             Print the final Jekyll command and exit
@@ -99,6 +101,10 @@ while [[ $# -gt 0 ]]; do
       ;;
     --build-js)
       BUILD_JS=1
+      shift
+      ;;
+    --trace)
+      TRACE=1
       shift
       ;;
     --docker)
@@ -178,7 +184,7 @@ if [[ "$MODE" == "docker" ]]; then
   exit 0
 fi
 
-CMD=(bundle exec jekyll serve --host "$HOST" --port "$PORT" --trace)
+CMD=(bundle exec jekyll serve --host "$HOST" --port "$PORT")
 
 if [[ "$LIVERELOAD" -eq 1 ]]; then
   CMD+=(--livereload --livereload-min-delay "$LIVERELOAD_MIN_DELAY" --livereload-max-delay "$LIVERELOAD_MAX_DELAY")
@@ -186,6 +192,10 @@ fi
 
 if [[ "$INCREMENTAL" -eq 1 ]]; then
   CMD+=(--incremental)
+fi
+
+if [[ "$TRACE" -eq 1 ]]; then
+  CMD+=(--trace)
 fi
 
 if [[ "$DRY_RUN" -eq 1 ]]; then

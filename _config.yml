@@ -24,13 +24,13 @@ repository               : "franz-chang/franz-chang.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Your Name"
-  pronouns         :
-  bio              : "[Your title and one-line bio placeholder]"
-  location         : "[City, Country]"
-  employer         : "[Your Institution]"
+  name             : "Chong Zhang"
+  pronouns         : "He/His"
+  bio              : "A curious researcher"
+  location         : "Suzhou，Shanghai"
+  employer         : "Xi'an Jiaotong-Liverpool University & University of Liverpool"
   uri              : "#"
-  email            : "your.email@example.com"
+  email            : "C.Zhang118#liverpool.ac.uk"
 
   # Academic websites
   academia         :
